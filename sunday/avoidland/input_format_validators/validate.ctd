@@ -1,0 +1,5 @@
+INT(1,10^6,n) NEWLINE
+REPI(i,n)
+  INT(1,n,x[i]) SPACE INT(1,n,y[i]) NEWLINE
+END
+ASSERT(UNIQUE(x,y))

@@ -1,0 +1,10 @@
+INT(1,60,k) NEWLINE
+REP(k)
+  INT(0,1000,n)
+  REPI(i,n)
+    SPACE INT(-10^6,10^6,x[i]) SPACE INT(-10^6,10^6,y[i])
+  END
+  NEWLINE
+  ASSERT(UNIQUE(x,y))
+  UNSET(x,y)
+END

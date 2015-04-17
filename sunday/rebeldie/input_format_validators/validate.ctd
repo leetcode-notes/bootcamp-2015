@@ -1,0 +1,10 @@
+INT(1,12,k) NEWLINE
+REP(k)
+  INT(1,100,m) SPACE INT(1,100,n) NEWLINE
+  REP(m)
+    REP(n,SPACE)
+      INT(0,29)
+    END
+    NEWLINE
+  END
+END

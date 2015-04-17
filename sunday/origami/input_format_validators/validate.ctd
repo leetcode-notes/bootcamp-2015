@@ -1,0 +1,14 @@
+INT(1,18,k) NEWLINE
+REP(k)
+  NEWLINE
+  INT(1,5,n) NEWLINE
+  REP(n)
+    INT(3,30,p) NEWLINE
+    REPI(i,p,SPACE)
+      INT(-10,10,x[i]) SPACE INT(-10,10,y[i])
+    END
+    NEWLINE
+    ASSERT(UNIQUE(x,y))
+    UNSET(x,y)
+  END
+END

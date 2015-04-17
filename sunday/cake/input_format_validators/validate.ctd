@@ -1,0 +1,9 @@
+INT(1,10,k) NEWLINE
+REP(k)
+  INT(1,10^4,p) SPACE INT(1,10^4,q) SPACE INT(1,p*q,n) NEWLINE
+  REPI(i,n)
+    INT(1,p,x[i]) SPACE INT(1,q,y[i]) NEWLINE
+  END
+  ASSERT(UNIQUE(x,y))
+  UNSET(x,y)
+END
