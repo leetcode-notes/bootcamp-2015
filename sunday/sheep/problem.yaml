@@ -13,5 +13,5 @@ license: cc by-sa
 #    validation_time: 240
 #    validation_memory: 3072
 #    validation_output: 4
-#validator_flags: space_change_sensitive float_absolute_tolerance 1e-6
+validator_flags: space_change_sensitive float_absolute_tolerance 5e-3
 #validation: custom
