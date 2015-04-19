@@ -1,0 +1,48 @@
+\problemname{Cake}
+
+Žofka really likes cakes. Her most recent favorite is a
+rectangular-shaped cake with hard chocolate glazing and white marzipan
+roses on top. The glazing has been pre-cut in a grid-like pattern at
+the bakery since this type of glazing is difficult to cut after it
+hardens. The bakers pride themselves in creating various creations
+with the roses---they place every rose in the middle of one of the
+grid squares (at most one rose per square) but the placement differs
+each time. Žofka invited her friends to share the cake with
+her---together with her there are as many people as there are roses on
+the cake as she and each of her friends like a piece with a
+rose. Žofka can cut only rectangular pieces of the cake along the grid
+lines.  How should she cut the cake so that she and each of her
+friends gets a rectangular piece with a rose and there is the smallest
+possible amount of leftover cake?
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{cake}
+  \caption{A possible solution for the sample input. The rectangular
+    pieces cover the cake entirely, so there are no leftovers. This
+    solution is described in the sample output. Note that there are
+    several other correct outputs for the sample input.}
+\label{fig:sample1}
+\end{figure}
+
+\section*{Input}
+
+The first line contains $k$, the number of cakes. Each cake is
+described on several lines. The first line contains $p$, $q$, and $n$,
+where $p \times q$ are the dimensions of the cake and $n$ is the
+number of roses. Then $n$ lines follow, the $i$-th line contains the
+coordinates of the $i$-th rose, where the first coordinate is between
+$1$ and $p$ and the second coordinate is between $1$ and $q$. You may
+assume that $p$ and $q$ are at most $10\,000$.
+
+\section*{Output}
+
+The output contains $n + 1$ lines for each cake. The first $n$ lines
+contain four numbers each: the $j$-th line contains $a_j$, $b_j$,
+$c_j$, $d_j$, where $1 \leq a_j \leq c_j \leq p$ and
+$1 \leq b_j \leq d_j \leq q$ and $(a_j, b_j)$ and $(c_j, d_j)$
+correspond to the grid squares at the opposite corners of the
+rectangular piece for the $j$-th person. The rectangular pieces have
+to be non-overlapping. The last line contains a single number, the
+area of the leftovers. The area of the leftovers should be the
+smallest possible.
