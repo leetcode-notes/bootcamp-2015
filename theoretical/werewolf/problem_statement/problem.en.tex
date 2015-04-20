@@ -1,0 +1,43 @@
+\problemname{Werewolf}
+As they usually do, $N$ robots are playing the game of Werewolf, and the robots are numbered with integers from $1$ to $N$. Exactly $W$ of these robots are werewolves, and the remainder are civilians. Though the game of Werewolf involves various aspects, we will focus on a single discussion phase of the game.
+
+Robots accuse other robots of being werewolves and defend other robots by vouching for their innocence.
+
+The werewolves know each other's identities and:
+
+\begin{itemize}
+\item a werewolf never accuses another werewolf;
+\item any robot that a werewolf defends is another werewolf.
+\end{itemize}
+
+Civilians may accuse or defend either type of robot.
+Additional constraints make our task a bit easier:
+
+\begin{itemize}
+\item No robot is both accused and defended.
+\item No robot is accused or defended more than once.
+\item For a robot $A$ to accuse or defend robot $B$, then $A < B$.
+\end{itemize}
+
+You will be given all the accusations and defenses between N robots where there are exactly $W$ werewolves. A role assignment identifies each of the robots as either werewolf or civilian. Your goal is to figure out how many role assignments satisfy all the above constraints.
+
+\section*{Input}
+The first line contains three numbers (each separated by one space):
+
+\begin{itemize}
+\item $N (1 \leq N \leq 200)$, the number of robots, followed by
+\item $W (0 \leq W \leq N)$, the number of werewolves, followed by
+\item $M (0 \leq M < N)$, the number of accusations/defenses.
+\end{itemize}
+
+The next $M$ lines give the accusations and defenses. Each of these lines will be one of the following two forms:
+
+\begin{itemize}
+\item $A$ $a$ $b$ indicates robot $a$ accused robot $b$ of being a werewolf;
+\item $D$ $a$ $b$ indicates robot $a$ defended robot $b$.
+\end{itemize}
+
+You may assume that for 20\% of the marks for this problem, $N \leq 20$.
+
+\section*{Output}
+Output the number of role assignments that are consistent with the given information. Since this number may be very large, you must output this answer modulo $10^9 + 7$.
