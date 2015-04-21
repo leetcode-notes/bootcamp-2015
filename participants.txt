@@ -6,6 +6,7 @@ Emil Wärnberg           | emilwa@kth.se
 Emanuel Gedin           | emanuel.gedin@gmail.com
 Emma Nimstad            | emma@nimstad.net
 Aron Granberg           | aron.granberg@gmail.com
+Anton Grensjö           | grensjo@kth.se
 
 Joakim Blikstad         | jockemocke@gmail.com
 Karl Lundstig           | karl.lundstig@gmail.com
@@ -18,3 +19,4 @@ Arash Rouhani           | arash@spotify.com
 Calle Svensson          | calle.svensson@zeta-two.com
 Niklas Bäckström        | nikbac@kth.se
 Simon Klein             | simmen33@hotmail.com
+Erik Odenman            | eodenman@kth.se
