@@ -28,9 +28,6 @@ int b0,b1,b2,b3,b4,b5,nx,ny,i,OK,SUP,j,mt,x,y,a0,a1,a2,a3,a4,a5;
 
 
 int main() {
-	scanf("%d",&k);
-	
-	for (ik=0;ik<k;ik++) {
 		scanf("%d %d ",&m,&n);
 		
 		//printf("DBG: %d %d %d\n",ik,m,n);
@@ -197,5 +194,4 @@ DONE:
 		
 		
 		
-	}	
 }

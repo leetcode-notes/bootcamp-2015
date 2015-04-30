@@ -30,8 +30,7 @@ out if a good camouflage exists.
 
 \section*{Input}
 
-The first line contains $k$, the number of boards. Each board is
-described on several lines.  The first line contains two integers $m$
+The first line contains two integers $m$
 (the height of the board) and $n$ (the width of the board). Then $m$ lines
 follow. Each of the $m$ lines contains $n$ integers. Each integer encodes
 a color. Assume that $1 \leq m, n \leq 100$ and the colors are integers from
@@ -39,9 +38,9 @@ $\{0, 1, \ldots, 29\}$.
 
 \section*{Output}
 
-The output contains one line for each board. The line for a board
-contains ``\verb+YES+'' if there exists a coloring of the die that allows the
-die to flip from the top-left corner square (the square in first
-column of the first row) to the bottom-right corner square (the square
-in the last column of the last row) on that board. If such a coloring
-does not exist then the line contains ``\verb+NO+''.
+The output contains one line with ``\verb+YES+'' if there exists a
+coloring of the die that allows the die to flip from the top-left
+corner square (the square in first column of the first row) to the
+bottom-right corner square (the square in the last column of the last
+row) on that board. If such a coloring does not exist then the line
+contains ``\verb+NO+''.

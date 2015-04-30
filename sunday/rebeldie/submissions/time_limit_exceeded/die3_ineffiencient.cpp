@@ -105,8 +105,6 @@ int main() {
     int k,i,j,s,p,c,cc,possible,colcount,u;
     struct dierot dd;
     
-    scanf("%d",&k);
-    for (; k>0; k--) {
         scanf("%d %d ",&M,&N);
         for (i=0; i<MC; i++) col[i] = MC;
         colcount = 0;
@@ -211,7 +209,6 @@ int main() {
             if (possible) printf("YES\n");
             else printf("NO\n");
         }
-    }
     
     return 0;   
 }
