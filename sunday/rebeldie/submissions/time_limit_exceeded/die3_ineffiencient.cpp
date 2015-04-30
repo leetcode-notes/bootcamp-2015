@@ -61,7 +61,8 @@ struct dierot turn(struct dierot cur, int dirturn) {
             dienew.r = cur.r;
             dienew.u = cur.b;
             return dienew;
-     }            
+     }
+     abort();
 }
        
 int roll(int i, int j, struct dierot d) {
@@ -87,6 +88,7 @@ int roll(int i, int j, struct dierot d) {
         ii = i+deltar[p];
         jj = j+deltac[p];
         // printf("ii = %d, jj = %d, ss = %d\n",ii,jj,dn.cs);
+        if (ii<0 || ii>=M || jj<0 || jj>=N) continue;
         if (!seen[ii][jj][dn.cs][dn.u]) {
            if (roll(ii,jj,dn)) return 1;
         }
