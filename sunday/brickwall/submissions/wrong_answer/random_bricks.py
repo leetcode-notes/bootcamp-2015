@@ -17,21 +17,18 @@ def try_path(bricks, path):
 
 START_TIME = time.time()
 TIME_LIMIT = 1.0
-k = int(raw_input())
-TIME_SPLIT = TIME_LIMIT/k
 
-for test in range(k):
-    N,c1,c2,c3 = map(int, raw_input().split())
-    b = map(int, raw_input().split())
-    path = [True]
-    for brick in b:
-        for i in range(brick-1):
-            path.append(True)
-        path.append(False)
-    path[-1] = True
-    good = False
-    while time.time() - START_TIME < (test+1)*TIME_SPLIT:
-        if try_path([c1,c2,c3], path):
-            good = True
-            break
-    print "YES" if good else "NO"
+N,c1,c2,c3 = map(int, raw_input().split())
+b = map(int, raw_input().split())
+path = [True]
+for brick in b:
+    for i in range(brick-1):
+        path.append(True)
+    path.append(False)
+path[-1] = True
+good = False
+while time.time() - START_TIME < (test+1)*TIME_SPLIT:
+    if try_path([c1,c2,c3], path):
+        good = True
+        break
+print "YES" if good else "NO"

@@ -27,9 +27,6 @@ typedef vector<int> vi;
 bool can[301][101][101][101];
 int main()
 {
-    int t; scanf("%d", &t);
-    rep(sd,0,t)
-    {
         int n, c1, c2, c3;
         scanf("%d %d %d %d", &n, &c1, &c2, &c3);
         c1 = min(c1, 100);
@@ -77,5 +74,4 @@ int main()
             if (can[sum][j][k][l])
                 ok = true;
         printf("%s\n", (ok ? "YES" : "NO"));
-    }
 }

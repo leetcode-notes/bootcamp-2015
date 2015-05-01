@@ -17,8 +17,6 @@ int main() {
     len[1] = 2;
     len[2] = 3; 
     
-    scanf("%d",&kk);
-    for (; kk>0; kk--) {
         scanf("%d %d %d %d",&N,&c[0],&c[1],&c[2]);
         sumlen = 0;
         for (i=0; i<N; i++) {
@@ -77,7 +75,6 @@ int main() {
         
         if (foundsol) printf("YES\n");
         else printf("NO\n");
-    }
     
     return 0;
 }

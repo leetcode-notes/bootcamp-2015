@@ -9,8 +9,6 @@ public class BrickWall {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter out = new PrintWriter(System.out);
 
-        int k = Integer.parseInt(in.readLine());
-        for (int test = 0; test < k; test++) {
             StringTokenizer st = new StringTokenizer(in.readLine());
             int N = Integer.parseInt(st.nextToken());
             c1 = Integer.parseInt(st.nextToken());
@@ -32,7 +30,6 @@ public class BrickWall {
             }
             boolean[][][] vis = new boolean[c1+1][c2+1][c3+1];
             out.println(dfs(0, 0, 0, good, vis) ? "YES" : "NO");
-        }
 
         in.close();
         out.close();
