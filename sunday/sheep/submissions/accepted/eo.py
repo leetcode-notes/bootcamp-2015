@@ -46,13 +46,11 @@ def solve(sides):
             A -= math.sqrt(p*abs(p-r)*abs(p-r)*abs(p-side))
         return A
 
-k = int(raw_input())
-for test in range(k):
-    sides = sorted(map(float, raw_input().split())[1:])
-    while sides and sides[-1] >= sum(sides[:-1]):
-        sides.pop()
-    res = solve(sides)
-    if sides:
-        sides.pop()
-    res = max(res, solve(sides))
-    print res
+sides = sorted(map(float, raw_input().split())[1:])
+while sides and sides[-1] >= sum(sides[:-1]):
+    sides.pop()
+res = solve(sides)
+if sides:
+    sides.pop()
+res = max(res, solve(sides))
+print res

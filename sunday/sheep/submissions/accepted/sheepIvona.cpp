@@ -71,8 +71,6 @@ int main() {
     int k,i,sumlen;
     double radius,left,right,mid,maxarea,area;
     
-    scanf("%d",&k);
-    for (; k>0; k--) {
         scanf("%d",&N);
         sumlen = 0;
         for (i=0; i<N; i++) {
@@ -153,7 +151,6 @@ int main() {
             sumlen -= len[N-1];
         }
         printf("%.2lf\n",maxarea);
-    }
     
     return 0;   
 }

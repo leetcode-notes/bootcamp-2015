@@ -1,8 +1,5 @@
-INT(1,13,k) NEWLINE
-REP(k)
-  INT(3,80,n)
-  REP(n)
-    SPACE INT(1,100)
-  END
-  NEWLINE
+INT(3,80,n)
+REP(n)
+  SPACE INT(1,100)
 END
+NEWLINE
