@@ -6,8 +6,6 @@ public class Coverup {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter out = new PrintWriter(System.out);
 
-        int k = Integer.parseInt(in.readLine());
-        for (int test = 0; test < k; test++) {
             StringTokenizer st = new StringTokenizer(in.readLine());
             int n = Integer.parseInt(st.nextToken());
             long[][] points = new long[n][2];
@@ -48,7 +46,6 @@ public class Coverup {
                 curr = next;
             }
             out.println(coverSides(Arrays.copyOfRange(sidelen, 0, sides)));
-        }
 
         in.close();
         out.close();

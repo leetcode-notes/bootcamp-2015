@@ -82,8 +82,6 @@ int cmpfnc(const void *a, const void *b) {
 int main() {
     int k,i,count,rem,left,right,offset;
     
-    scanf("%d",&k);
-    for (; k>0; k--) {
         scanf("%d",&N);
         scanf("%d %d",&point[0].x,&point[0].y);
         bl.x = point[0].x;
@@ -180,7 +178,6 @@ int main() {
         // printf("after pass 4, count = %d:\n",count);
         
         printf("%d\n",count);
-    }
     
     return 0;
 }

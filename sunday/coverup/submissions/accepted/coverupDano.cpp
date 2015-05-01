@@ -23,9 +23,6 @@ int comp(const void *a,const void *b) {
 
 int main () {
     
-    scanf("%d",&k);    
-    for (i=0;i<k;i++) {
-        
         sc=0;
         scanf("%d",&n);      
         
@@ -133,7 +130,6 @@ int main () {
         */
         
         
-    }
     
     
     
