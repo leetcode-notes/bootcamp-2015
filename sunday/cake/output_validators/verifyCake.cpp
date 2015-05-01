@@ -10,10 +10,7 @@ int A,B,N;
 char cake[MAXD][MAXD];
 
 
-int main (int argc, char** argv) {
-    // assuming first: original input
-    //          second: the output
-    
+int main (int argc, char** argv) {    
     FILE *fin, *fout;
     
     int k,i,j,p,remarea,foundrose,r1,r2,c1,c2,r,c,K;
@@ -23,8 +20,6 @@ int main (int argc, char** argv) {
     string feedback_filename = string(argv[3])+"judgemessage.txt";
     FILE *feedback = fopen(feedback_filename.c_str(),"w");
     
-    fscanf(fin,"%d",&K);
-    for (k=1; k<=K; k++) {
         fscanf(fin,"%d %d %d",&A,&B,&N);
         for (i=1; i<=A; i++) {
             for (j=1; j<=B; j++) {
@@ -70,8 +65,6 @@ int main (int argc, char** argv) {
            fprintf(feedback,"incorrect remarea -- possible to have 0\n");
            return 43;            
         }
-        fprintf(feedback,"Output %d/%d: OK!\n",k,K);
-    }
     
     fprintf(feedback,"OK!\n");
     

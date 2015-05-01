@@ -25,8 +25,6 @@ int cmpfnc (const void *x, const void *y) {
 int main () {
     int k,i,maxr,lastrow,lastcol;
     
-    scanf("%d",&k);
-    for (; k>0; k--) {
         scanf("%d %d %d",&A,&B,&N);
         maxr = 0;
         for (i=0; i<N; i++) {
@@ -57,7 +55,6 @@ int main () {
               }
         }
         printf("\n0\n");
-    }
     
     return 0;   
 }
