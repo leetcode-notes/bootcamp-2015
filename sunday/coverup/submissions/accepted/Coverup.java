@@ -18,7 +18,6 @@ public class Coverup {
                 }
             }
 
-            Fraction prev = null;
             int[] sidelen = new int[n];
             int sides = 0;
             int curr = start;
@@ -29,20 +28,22 @@ public class Coverup {
                     long[] p1 = subtract(points[next], points[curr]);
                     long[] p2 = subtract(points[i], points[curr]);
                     long cr = cross(p1, p2);
-                    if (cr > 0 || cr == 0 && norm2(p2) < norm2(p1)) {
+                    if (cr > 0 || cr == 0 && norm2(p2) > norm2(p1)) {
                         next = i;
                     }
                 }
                 Fraction f = new Fraction(subtract(points[next], points[curr]));
-                if (f.equals(prev)) {
-                    sidelen[sides-1]++;
-                } else {
-                    sides++;
+                for (int i = 0; i < n; i++) {
+                    if (i == curr || i == next) continue;
+                    Fraction f2 = new Fraction(subtract(points[i], points[curr]));
+                    if (f.equals(f2)) {
+                        sidelen[sides]++;
+                    }
                 }
+                sides++;
                 if (next == start) {
                     break;
                 }
-                prev = f;
                 curr = next;
             }
             out.println(coverSides(Arrays.copyOfRange(sidelen, 0, sides)));
