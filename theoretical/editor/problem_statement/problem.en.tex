@@ -1,0 +1,46 @@
+\problemname{Editor Distance}
+You are using an editor to type in a program that you hope solves another problem on this contest.
+Instead of thinking about solving this problem, you look at your editor and start to think of how to
+edit your program more quickly.
+
+Your editor has the following characteristics:
+\begin{itemize}
+  \item you can move your cursor using the direction keys: up ($\uparrow$), down ($\downarrow$),
+  left ($\leftarrow$) or right ($\rightarrow$).
+
+  \item pressing $\rightarrow$ will move the cursor one character to the right; if the cursor is on
+  the rightmost character of a line, the cursor will move to the first character of the next line
+  below the current line; (the cursor will not move if it is in the bottom-right position)
+
+  \item pressing $\leftarrow$ will move the cursor one character to the left; if the cursor is on
+  the leftmost character of a line, the cursor will move to the last character of the previous
+  line above the current line; (the cursor will not move if it is in the top-left position)
+
+  \item pressing $\uparrow$ will move the cursor to the character immediately above it; if there is
+  no character immediately above the cursor, it will move to the last character of the previous
+  line above the current line; (the cursor will not move if it is on the first line)
+
+  \item pressing $\downarrow$ will move the cursor to the character immediately below it; if there
+  is no character immediately below the cursor, it will move to the last character of the next
+  line below the current line; (the cursor will not move if it is on the last line) You would like
+  to find the least number of key presses that will cause you to move between posi- tions in your
+  editor in a given program which you are editing.
+\end{itemize}
+
+You would like to find the least number of key presses that will cause you to move between posi-
+tions in your editor in a given program which you are editing.
+
+\section*{Input}
+The first line of input is $N$, the number of lines of your program $(1 \leq N \leq 100\,000)$. The
+next $N$ lines contain the number of characters on each line: you can assume there is at least one
+character per line, and at most $10\,000$ characters per line. The next line contains two integers
+``$R_S$ $C_S$'', indicating the starting row and column of the cursor $(1 \leq R_S \leq N$, $1 \leq
+C_S$, and $C_S$ is at most the number of characters in row $R_S$). The last line contains two integers
+``$R_F$ $C_F$'', indicating the finishing row and column of the cursor $(1 \leq R_F \leq N$, $1
+\leq C_F$, and $C_F$ is at most the number of characters in row $R_F$).
+
+For partial credit, you may assume that there are at most $80$ characters per line.
+
+\section*{Output}
+Output the minimum number of key presses that are required to move the cursor from row $R_S$ and
+column $C_S$ to row $R_F$ and column $C_F$.
