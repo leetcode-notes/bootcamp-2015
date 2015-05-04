@@ -1,20 +1,40 @@
 \problemname{Gates}
 
-You're in an airport hallway with $G (1 \leq G \leq 10^9)$ gates, numbered from $1$ to $G$ in order. The entrance to gate $i$ is $100 \cdot i$ metres from the start of the hallway. There are also $N (0 \leq N \leq 10^5)$ moving walkways. The $i$th walkway runs from the entrance to gate $A_i (1 \leq A_i \leq G)$ to the entrance to a different gate $B_i (1 \leq B_i \leq G)$ at a speed of $S_i (1 \leq S_i \leq 10^9)$ metres per minute, in one direction only. At every point along the hallway, there is at most one walkway moving in each direction (towards the start of the hallway, or away from it). However, it is possible that one walkway starts at the same gate as another walkway, moving in the same direction, ends. 
+You're in an airport hallway with $G$ $(1 \leq G \leq 10^9)$ gates, numbered from $1$ to $G$ in
+order. The entrance to gate $i$ is $100 \cdot i$ metres from the start of the hallway. There are
+also $N$ $(0 \leq N \leq 10^5)$ moving walkways. The $i$th walkway runs from the entrance to gate
+$A_i$ $(1 \leq A_i \leq G)$ to the entrance to a different gate $B_i$ $(1 \leq B_i \leq G)$ at a
+speed of $S_i$ $(1 \leq S_i \leq 10^9)$ metres per minute, in one direction only. At every point
+along the hallway, there is at most one walkway moving in each direction (towards the start of the
+hallway, or away from it). However, it is possible that one walkway starts at the same gate as
+another walkway, moving in the same direction, ends.
 
-You can walk in either direction along the hallway at a speed of $W (1 \leq W \leq 10^9)$ metres per minute. Additionally, when at the start of a walkway, you may choose to get on it, in which case it'll carry you directly to its end - you may not get on or off in between these points. While on walkway $i$, you will move at a speed of $W + S_i$ metres per minute.
+You can walk in either direction along the hallway at a speed of $W$ $(1 \leq W \leq 10^9)$ metres
+per minute. Additionally, when at the start of a walkway, you may choose to get on it, in which case
+it'll carry you directly to its end -- you may not get on or off in between these points. While on
+walkway $i$, you will move at a speed of $W + S_i$ metres per minute.
 
-To amuse yourself while waiting for your flight (which, of course, has been delayed), you've posed $Q (1 \leq Q \leq 10^5)$ queries to yourself. The $i$th query involves finding the minimal time in which you can get from gate $X_i (1 \leq X_i \leq G)$ to gate $Y_i (1 \leq Y_i \leq G)$. To make things more interesting, you've decided that you won't board your flight unless you can correctly answer all of these queries - so you'd better not screw up!
+To amuse yourself while waiting for your flight (which, of course, has been delayed), you've posed
+$Q$ $(1 \leq Q \leq 10^5)$ queries to yourself. The $i$th query involves finding the minimal time in
+which you can get from gate $X_i$ $(1 \leq X_i \leq G)$ to gate $Y_i$ $(1 \leq Y_i \leq G)$. To make
+things more interesting, you've decided that you won't board your flight unless you can correctly
+answer all of these queries -- so you'd better not screw up!
 
 \section*{Input}
-The first line contains four integers: $G (1 \leq G \leq 10^9)$, the number of gates; $W (1 \leq W \leq 10^9)$, the walking speed; $N (0 \leq N \leq 10^5)$, the number of moving walkways; and $Q (1 \leq Q \leq 10^5)$, the number of queries. 
+The first line contains four integers: $G$ $(1 \leq G \leq 10^9)$, the number of gates; $W$ $(1 \leq
+W \leq 10^9)$, the walking speed; $N (0 \leq N \leq 10^5)$, the number of moving walkways; and $Q (1
+\leq Q \leq 10^5)$, the number of queries.
 
-The next $N$ lines each contain three integers dealing with walkway $i$ ($i = 1..N$): $A_i (1 \leq A_i \leq G)$, the starting gate; $B_i (1 \leq B_i \leq G)$, the ending gate; $S_i (1 \leq S_i \leq 10^9)$, the speed. Note that $A_i \neq B_i$ for any $i$. 
+The next $N$ lines each contain three integers dealing with walkway $i$ ($1\leq i \leq N$): $A_i$
+$(1 \leq A_i \leq G)$, the starting gate; $B_i$ $(1 \leq B_i \leq G)$, the ending gate; $S_i$ $(1 \leq
+S_i \leq 10^9)$, the speed. Note that $A_i \neq B_i$ for any $i$.
 
-The next $Q$ lines each contain two integers dealing with query $i = 1..Q$: $X_i (1 \leq X_i \leq G)$, the starting gate; and $Y_i (1 \leq Y_i \leq G)$, the ending gate.
+The next $Q$ lines each contain two integers dealing with query $i, 1 \leq i \leq Q$: $X_i$ $(1 \leq
+X_i \leq G)$, the starting gate; and $Y_i$ $(1 \leq Y_i \leq G)$, the ending gate.
 
-You can assume that for some test cases, at least some of $G$, $N$ and $Q$ are small. This information may be helpful, or not.
+For partial credit, you can assume that some of $G$, $N$ and $Q$ are small.
 
 \section*{Output}
-
-The output is $Q$ lines, each line containing one real number which is the minimal amount of time required to travel from gate $X_i$ to gate $Y_i$ (in minutes), for $i = 1..Q$. The output will be judged to be correct if the outputted answer is within a factor of $10^4$ of the correct solution: that is, if $D$ is the correct answer, values in the range $[D \cdot (1-10^4), D \cdot (1 + 10^4)]$ will be judged as correct.
+The output is $Q$ lines, each line containing one real number which is the minimal amount of time
+required to travel from gate $X_i$ to gate $Y_i$ (in minutes), for $i = 1..Q$. The output is
+considered correct if the relative error is at most $10^{-4}$.

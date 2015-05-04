@@ -1,23 +1,21 @@
 \problemname{Lazy Fox}
 
 You have a pet Fox who loves treats. You have $N$ neighbours at distinct locations (described as points on the Cartesian plane) which hand out treats to your pet Fox, and each neighbour has an unlimited number of treats to give out. The origin (which is where the Fox starts) will not be one of these $N$ locations.
- 
+
 What does the Fox say, in order to get these treats? That is a good question, but not our concern. The Fox moves from location to location to gather exactly one treat from each location on each visit. He can revisit any previous location, but cannot visit the same location on two consecutive visits.
- 
+
 Your Fox is very lazy. The distance your Fox is willing to travel after each treat will strictly decrease. Specifically, the distance from the origin to his first treat location must be larger than the distance from his first treat location to his second treat location, which in turn is larger than the distance between his second treat location and his third treat location, and so on.
- 
+
 What is the largest number of treats your Fox gathers?
 
 \section*{Input}
-The first line contains the integer $N (1 \leq N \leq 2000)$. The next $N$ lines each contain $X_i$, followed
-by a space, followed by $Y_i$, for $i = 1..N (-10000 \leq X_i,Y_i \leq 10000)$ representing the coordinates
-of the $i$th location. The following additional constraints will apply.
+The first line contains the integer $N (1 \leq N \leq 2000)$. The next $N$ lines each contain $X_i$,
+followed by a space, followed by $Y_i$, for all $i, 1 \leq i \leq N$ $(-10\,000 \leq X_i,Y_i \leq
+10\,000$) representing the coordinates of the $i$th location. The following additional constraints
+will apply.
 
-\begin{itemize}
-\item At least 20\% of the marks will be for test cases where $N \leq 50$;
-\item at least 40\% of the marks will be for test cases where $N \leq 200$;
-\item the remaining marks will be for test cases where $N \leq 2000$.
-\end{itemize}
+For partial credit, you may assume that $N \leq 2000$. For even less credit, you may assume that $N
+\leq 200$. For the least amount of credit, you may assume $N \leq 50$.
 
 
 \section*{Output}
