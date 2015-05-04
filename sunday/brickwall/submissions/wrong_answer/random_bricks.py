@@ -16,7 +16,7 @@ def try_path(bricks, path):
     return True
 
 START_TIME = time.time()
-TIME_LIMIT = 1.0
+TIME_LIMIT = 0.9
 
 N,c1,c2,c3 = map(int, raw_input().split())
 b = map(int, raw_input().split())
@@ -27,7 +27,7 @@ for brick in b:
     path.append(False)
 path[-1] = True
 good = False
-while time.time() - START_TIME < (test+1)*TIME_SPLIT:
+while time.time() - START_TIME < TIME_LIMIT:
     if try_path([c1,c2,c3], path):
         good = True
         break
