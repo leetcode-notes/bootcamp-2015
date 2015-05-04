@@ -153,30 +153,18 @@ int get(const int i, const uint edgemask, const int endpoints, const uint info) 
   return x;
 }
 
-int moin() {
+int main() {
   cin >> n >> d >> m;
+  int nedges=0;
   for (int i=0;i<n;++i) {
     cin >> a[i];
     for (int j=1;j<=d;++j) {
       g[i][j] = (j<=i and abs(a[i]-a[i-j])<=m);
+      if (g[i][j]) nedges++;
     }
   }
+  //cerr << nedges << endl;
   for (int j=1;j<=d;++j) g[n][j]=0;
   cout << get(n,0,2,0)/2+1 << endl;
   return 0;
-}
-
-int main() {
-  int q;
-  cin >> q;
-  while(q--) {
-    for (int i=0;i<10002;++i) {
-      for (int j=0;j<(1<<8);++j) {
-        for (int k=0;k<3;++k) {
-          dp[i][j][k].clear();
-        }
-      }
-    }
-    moin();
-  }
 }
