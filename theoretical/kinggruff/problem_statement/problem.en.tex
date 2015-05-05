@@ -1,37 +1,54 @@
 \problemname{King Gruff}
 King Gruff the Wolf rules over a happy, prosperous land inhabited by adorable Foxes. Unfortunately for them, he is not a nice king at all, and wants to make their lives miserable!
 
-His country has $N (1 \leq N \leq 10^5)$ cities, with $M (0 \leq M \leq 10^5)$ roads running amongst them. The $i$th road allows one to travel from city $X_i$ to a different city $Y_i (1 \leq X_i,Y_i \leq N)$, in that direction only, and has a length of $L_i (1 \leq L_i \leq 10^4)$ and a shutdown cost of $C_i (1 \leq Ci \leq 10^4)$. There may be multiple roads running between a pair of cities, even in the same direction.
+His country has $N$ $(1 \leq N \leq 10^5)$ cities, with $M$ $(0 \leq M \leq 10^5)$ roads running
+amongst them. The $i$th road allows one to travel from city $X_i$ to a different city $Y_i$ $(1 \leq
+X_i,Y_i \leq N)$, in that direction only, and has a length of $L_i$ $(1 \leq L_i \leq 10^4)$ and a
+shutdown cost of $C_i$ $(1 \leq Ci \leq 10^4)$. There may be multiple roads running between a pair
+of cities, even in the same direction.
 
-King Gruff particularly dislikes the Foxes living in two different cities $A$ and $B (1 \leq A,B \leq N)$, and would like to make it more inconvenient (or even impossible) to travel from city $A$ to city $B$. In particular, he'll select a distance value $D (1 \leq D \leq 10^9)$, and then simultaneously shut down every single road in his kingdom which is part of at least one path from city $A$ to city $B$ with total length no more than $D$. For each such road, however, he'll have to dig into his royal treasury and pay its shutdown cost. A path consists of a sequence of roads such that each road (except the first) starts at the city that the previous road ended at, and may visit a city or road multiple times.
+King Gruff particularly dislikes the Foxes living in two different cities $A$ and $B$ $(1 \leq A,B
+\leq N)$, and would like to make it more inconvenient (or even impossible) to travel from city $A$
+to city $B$. In particular, he'll select a distance value $D$ $(1 \leq D \leq 10^9)$, and then
+simultaneously shut down every single road in his kingdom which is part of at least one path from
+city $A$ to city $B$ with total length no more than $D$. For each such road, however, he'll have to
+dig into his royal treasury and pay its shutdown cost. A path consists of a sequence of roads such
+that each road (except the first) starts at the city that the previous road ended at, and may visit
+a city or road multiple times.
 
-Gruff is having trouble making up his mind about what value of $D$ to choose, however - a larger value would make things more inconvenient for his Foxy subjects, but might cost him more money as well! As such, he'll consider $Q (1 \leq Q \leq 10^5)$ different values, $D_1, D_2, ..., D_Q$. For each one, he'd like to know how many tax dollars would need to be spent to shut down all roads which lie on at least one sufficiently short path from city $A$ to city $B$. Since you don't like Foxes either, you've agreed to help the Wolf write a program to calculate this!
+Gruff is having trouble making up his mind about what value of $D$ to choose, however -- a larger
+value would make things more inconvenient for his Foxy subjects, but might cost him more money as
+well! As such, he'll consider $Q$ $(1 \leq Q \leq 10^5)$ different values, $D_1, D_2, \ldots, D_Q$.
+For each one, he'd like to know how many tax dollars would need to be spent to shut down all roads
+which lie on at least one sufficiently short path from city $A$ to city $B$. Since you don't like
+Foxes either, you've agreed to help the Wolf write a program to calculate this!
 
 \section*{Input}
 The first line contains 4 integers, each separated by a space:
 
 \begin{itemize}
-\item $N (1 \leq N \leq 10^5)$, the number of cities, followed by
-\item $M (0 \leq M \leq 10^5)$, the number of roads, followed by
-\item $A (1 \leq A \leq N)$, the starting city, followed by
-\item $B (1 \leq B \leq N)$, the ending city.
+\item $N$ $(1 \leq N \leq 10^5)$, the number of cities, followed by
+\item $M$ $(0 \leq M \leq 10^5)$, the number of roads, followed by
+\item $A$ $(1 \leq A \leq N)$, the starting city, followed by
+\item $B$ $(1 \leq B \leq N)$, the ending city.
 \end{itemize}
 
-Each of the next $M$ lines contain four space-separated integers $X_i$, $Y_i$, $L_i$, and $C_i$, describing the road from $X_i$ to $Y_i$ with length $L_i$ and shutdown cost $C_i$ (where $1 \leq X_i,Y_i \leq N, 1 \leq L_i,C_i \leq 10^4)$.
+Each of the next $M$ lines contain four space-separated integers $X_i$, $Y_i$, $L_i$, and $C_i$,
+describing the road from $X_i$ to $Y_i$ with length $L_i$ and shutdown cost $C_i$ (where $1 \leq
+X_i,Y_i \leq N, 1 \leq L_i,C_i \leq 10^4)$.
 
-The next line contains $Q (1 \leq Q \leq 10^5)$, the number of different distance values to consider.
+The next line contains $Q$ $(1 \leq Q \leq 10^5)$, the number of different distance values to
+consider.
 
-The next $Q$ lines each contain one integer $D_i (1 \leq D_i \leq 10^9)$, which is the distance value to consider in shutting down roads.
+The next $Q$ lines each contain one integer $D_i$ $(1 \leq D_i \leq 10^9)$, which is the distance value to consider in shutting down roads.
 
-The following conditions hold for the input data:
 
-\begin{itemize}
-\item For test cases worth up to 20\% of the points, $N \leq 500$;
-\item For test cases worth up to 20\% of the points, $Q = 1$;
-\item For test cases worth up to 80\% of the points, $Q \leq 20$.
-\end{itemize}
+For partial credit, you can assume that $Q \leq 20$. For smaller credit, you can assume that $Q =
+1$.
+
+For partial credit, you can also assume that $N \leq 500$.
 
 
 \section*{Output}
 The output consists of $Q$ lines, each with one integer, representing the total cost required to shut
-down all necessary roads given a distance value of $D_i$, for $i = 1..Q$
+down all necessary roads given a distance value of $D_i$, for $1 \leq i \leq Q$.
