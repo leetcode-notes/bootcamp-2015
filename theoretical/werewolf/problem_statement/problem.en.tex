@@ -25,9 +25,9 @@ You will be given all the accusations and defenses between N robots where there 
 The first line contains three numbers (each separated by one space):
 
 \begin{itemize}
-\item $N (1 \leq N \leq 200)$, the number of robots, followed by
-\item $W (0 \leq W \leq N)$, the number of werewolves, followed by
-\item $M (0 \leq M < N)$, the number of accusations/defenses.
+\item $N$ $(1 \leq N \leq 200)$, the number of robots, followed by
+\item $W$ $(0 \leq W \leq N)$, the number of werewolves, followed by
+\item $M$ $(0 \leq M < N)$, the number of accusations/defenses.
 \end{itemize}
 
 The next $M$ lines give the accusations and defenses. Each of these lines will be one of the following two forms:
@@ -37,7 +37,7 @@ The next $M$ lines give the accusations and defenses. Each of these lines will b
 \item $D$ $a$ $b$ indicates robot $a$ defended robot $b$.
 \end{itemize}
 
-You may assume that for 20\% of the marks for this problem, $N \leq 20$.
+For partial credit, you may assume that $N \leq 20$.
 
 \section*{Output}
 Output the number of role assignments that are consistent with the given information. Since this number may be very large, you must output this answer modulo $10^9 + 7$.
