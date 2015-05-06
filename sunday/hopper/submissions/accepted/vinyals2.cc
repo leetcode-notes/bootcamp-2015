@@ -8,7 +8,7 @@ const int INF=1<<29;
 
 typedef unordered_map<uint,int> MII;
 
-MII dp[10002][1<<8][3];
+MII dp[2][1<<8][3];
 int g[10001][8]; // edges pointing to the left
 int a[10000];
 int n,d,m;
@@ -138,7 +138,7 @@ void advance(const int i, const uint edgemask, const int endpoints, const uint i
         doubleinfo&=~(1<<jj);
         if (k==2) doubleinfo|=1;
         uint ninfo=recode(nedgemask,doubleinfo,classinfo,jj?classof[jj-1]:-1);
-        int& x = dp[i][nedgemask][nendpoints][ninfo];
+        int& x = dp[0][nedgemask][nendpoints][ninfo];
         x=max(x,degree+len);
       }
     }
@@ -148,13 +148,14 @@ void advance(const int i, const uint edgemask, const int endpoints, const uint i
 void build(int i) {
   for (uint edgemask=0;edgemask<(1<<d);++edgemask) {
     for (int endpoints=0;endpoints<=2;++endpoints) {
-      auto& cell=dp[i+1][edgemask][endpoints];
+      auto& cell=dp[1][edgemask][endpoints];
       for (const auto& it : cell) {
         advance(i,edgemask,endpoints,it.first,it.second);
       }
       cell.clear();
     }
   }
+  swap(dp[0],dp[1]);
 }
 
 int main() {
@@ -169,8 +170,8 @@ int main() {
   }
   //cerr << nedges << endl;
   for (int j=1;j<=d;++j) g[n][j]=0;
-  dp[n+1][0][2][0]=0;
+  dp[1][0][2][0]=0;
   for (int i=n;i>=0;--i) build(i);
-  cout << dp[0][0][0][0]/2+1 << endl;
+  cout << dp[1][0][0][0]/2+1 << endl;
   return 0;
 }

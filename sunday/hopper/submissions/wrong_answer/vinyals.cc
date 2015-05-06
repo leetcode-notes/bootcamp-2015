@@ -62,7 +62,7 @@ int get(const int i, const int edgemask, const int endpoints) {
   return x;
 }
 
-int moin() {
+int main() {
   memset(dp,-1,sizeof(dp));
   cin >> n >> d >> m;
   for (int i=0;i<n;++i) {
@@ -73,10 +73,4 @@ int moin() {
   }
   for (int j=1;j<=d;++j) g[n][j]=0;
   cout << get(n,0,2)/2+1 << endl;
-}
-
-int main() {
-  int k;
-  cin >> k;
-  while(k--) moin();
 }
