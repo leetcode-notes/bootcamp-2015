@@ -3,9 +3,9 @@ source_url: http://www.cs.rit.edu/~icpc/finals.html
 rights_owner: University of Rochester
 license: cc by-sa
 
-#limits:
-#    time_multiplier: 5
-#    time_safety_margin: 2
+limits:
+    time_multiplier: 4
+    time_safety_margin: 2
 #    memory: 4096
 #    output: 16
 #    compilation_time: 240
