@@ -16,7 +16,7 @@ public class Klein
 		if(n==1){ out.println(++a + " " + ++b + " " + ++c + " " + ++d); return; }
 
 		int tmp;
-		for(int y = a+1; y<c; y++)
+		for(int y = a; y<c; y++)
 		{
 			tmp = sum(a,b,y,d);
 			if(tmp>0 && tmp<n)
@@ -26,7 +26,7 @@ public class Klein
 				return;
 			}
 		}
-		for(int x = b+1; x<d; x++)
+		for(int x = b; x<d; x++)
 		{
 			tmp = sum(a,b,c,x);
 			if(tmp>0 && tmp<n)
