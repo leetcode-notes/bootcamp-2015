@@ -4,7 +4,7 @@ rights_owner: University of Rochester
 license: cc by-sa
 
 limits:
-    time_multiplier: 4
+    time_multiplier: 2
     time_safety_margin: 2
 #    memory: 4096
 #    output: 16
